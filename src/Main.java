@@ -1,25 +1,20 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        // Generate random number
-        int random = (int)(Math.random() * 3) + 0;
-        int FDHour = 8;
-        int PTHour = 4;
         int WPHour = 20;
-        int TWDay = 20;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Total Working Hours :");
+        int TWH = sc.nextInt();
+        System.out.print("Enter Total Working Days :");
+        int TWD = sc.nextInt();
 
-        switch (random){
-            case 0:
-                System.out.println("Employee is Absent");
-                break;
-            case 1:
-                int  DEWage = FDHour * WPHour * TWDay;
-                System.out.println("Monthly Full Time Employee Wage = Rs."+DEWage);
-                break;
-            case 2:
-                int PTWage = PTHour * WPHour * TWDay;
-                System.out.println("Monthly Part Time Employee Wage = Rs."+PTWage);
-                break;
+        if(TWH >= 100 || TWD >= 20) {
+            int TEWage = TWH * TWD * WPHour;
+            System.out.println("Total Wage = Rs." + TEWage);
+
+        }else {
+            System.out.println("TWH or TWD are less");
         }
 
     }
