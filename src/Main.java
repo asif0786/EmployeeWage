@@ -6,14 +6,19 @@ public class Main {
         int FDHour = 8;
         int PTHour = 4;
         int WPHour = 20;
-        if(random == 1){
-            int  DEWage = FDHour * WPHour;
-            System.out.println("Daily Full Time Employee Wage = Rs."+DEWage);
-        } else if (random == 2) {
-            int PTWage = PTHour * WPHour;
-            System.out.println("Daily Part Time Employee Wage = Rs."+PTWage);
-        } else {
-            System.out.println("Employee is Absent");
+
+        switch (random){
+            case 0:
+                System.out.println("Employee is Absent");
+                break;
+            case 1:
+                int  DEWage = FDHour * WPHour;
+                System.out.println("Daily Full Time Employee Wage = Rs."+DEWage);
+                break;
+            case 2:
+                int PTWage = PTHour * WPHour;
+                System.out.println("Daily Part Time Employee Wage = Rs."+PTWage);
+                break;
         }
 
     }
